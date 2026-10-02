@@ -1,4 +1,5 @@
-name: app workflow
+env: 
+  name: app workflow
 
 on:
   push:
@@ -13,7 +14,7 @@ jobs:
           uses: actions/checkout@v4
 
         - name: say hello
-          run: echo "hello"
+          run: echo $name
 
         - name: list files
           run: ls
