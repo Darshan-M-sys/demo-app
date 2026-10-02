@@ -11,9 +11,16 @@ jobs:
      steps:
         - name: get code
           uses: actions/checkout@v4
-          
+
         - name: say hello
           run: echo "hello"
 
         - name: list files
           run: ls
+
+  build: 
+     runs-on: ubuntu-latest
+     steps: 
+        - name: running dependencies
+          run: npm install
+          
