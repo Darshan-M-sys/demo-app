@@ -1,5 +1,6 @@
 env: 
   name: app workflow
+  API_KEY: ${{ secrets.API_KEY}}
 
 on:
   push:
@@ -10,15 +11,11 @@ jobs:
   test:
      runs-on: ubuntu-latest
      steps:
-        - name: env test
-          env:
-            API_KEY: ${{ secrets.API_KEY }}
-            run: echo $API_KEY
         - name: get code
           uses: actions/checkout@v4
 
         - name: say hello
-          run: echo $name
+          run: echo $API_KEY
 
         - name: list files
           run: ls
