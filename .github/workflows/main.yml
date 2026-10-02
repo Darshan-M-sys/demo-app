@@ -23,5 +23,5 @@ jobs:
      runs-on: ubuntu-latest
      steps: 
         - name: running dependencies
-          run: npm install
+          run: echo "hello this is another job"
 
