@@ -1,13 +1,15 @@
-name: my first workflow
+name: My First GitHub Action
 
-on: 
+on:
   push:
-    branches:
-      - main
 
-jobs: 
-  test:
+jobs:
+  hello:
     runs-on: ubuntu-latest
+
     steps:
-       - name: say Hello
-         run: echo "hello" 
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions"
+
+      - name: Show Git version
+        run: git --version
